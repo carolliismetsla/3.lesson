@@ -8,45 +8,30 @@ if (isset($_GET["From"])) {
   //if its empty
   if(empty($_GET["From"])){
     //it is empty
-    echo "Please type your name!";
+    echo "Please enter your name! <br>";
   }else{
       //its not empty
-    echo "Mrom: ".$_GET["From"]."<br>";
+    echo "Fmmmrom: ".$_GET["From"]."<br>";
   }
 
 }else{
    //echo"there is no such thing as From";
  }
-
- if (isset($_GET["To"])) {
-
-   //only if there is From in the URL
-   //echo "there is To";
-
-   //if its empty
-   if(empty($_GET["To"])){
-     //it is empty
-     echo "Please type the receiver!";
+//*************************
+//TO field validation
+//*************************
+ if (isset($_GET["To"])) { //if there is ?to= in the URL
+   if(empty($_GET["To"])){ //if it is empty
+     echo "Please enter the receipient! <br>"; //yes it is empty
    }else{
-       //its not empty
-     echo "Mrom: ".$_GET["To"]."<br>";
+     echo "To: ".$_GET["To"]."<br>"; //no it is not empty
    }
-
- }else{
-    //echo"there is no such thing as To";
-  }
+ }
 
 if (isset($_GET["message"])) {
-
-  //only if there is message in the URL
-  //echo "there is message";
-
-  //if its empty
   if(empty($_GET["message"])){
-    //it is empty
-    echo "Please enter the message!";
+    echo "Please enter your message!";
   }else{
-      //its not empty
     echo "Message: ".$_GET["message"]."<br>";
   }
 
@@ -57,13 +42,13 @@ if (isset($_GET["message"])) {
 
 //getting the message from address
 //if there is ?name= .. then $_GET["name"]
-$my_message = $_GET["message"];
+/*$my_message = $_GET["message"];
 $To = $_GET["To"];
-$from = $_GET["From"];
+$from = $_GET["From"];*/
 
 
 
-echo "My message is ".$my_message." and is to ".$To."and from".$from;
+//echo "My message is ".$my_message." and is to ".$To."and from".$from;
 
  ?>
 
@@ -84,3 +69,7 @@ echo "My message is ".$my_message." and is to ".$To."and from".$from;
      <input type= "submit" value= "Save to DB">
 
 <form>
+
+<p>
+
+</p>
